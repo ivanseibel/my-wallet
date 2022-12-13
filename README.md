@@ -35,7 +35,7 @@ To run this project locally, you need to have Node.js installed on your machine.
 
 ## Tasks <a name = "tasks"></a>
 
-- Visual Structure
+- **Visual Structure**
   - [x] Project setup
   - [ ] Header component
   - [ ] Summary component
