@@ -37,7 +37,7 @@ To run this project locally, you need to have Node.js installed on your machine.
 
 - **Visual Structure**
   - [x] Project setup
-  - [ ] Header component
+  - [x] Header component
   - [ ] Summary component
   - [ ] Transactions component
   - [ ] Search Form component
@@ -54,6 +54,7 @@ To run this project locally, you need to have Node.js installed on your machine.
 - Typescript - Typed JavaScript at Any Scale
 - editorconfig - Helps developers define and maintain consistent coding styles between different editors and IDEs
 - styled-components - Visual primitives for the component age
+- eslint - Find and fix problems in your JavaScript code
 
 ## Issues <a name = "issues"></a>
 
