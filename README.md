@@ -41,10 +41,10 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Summary component
   - [x] Transactions table
   - [x] Search Form component
-  - [ ] Accessible modal
-  - [ ] New transaction Modal
-  - [ ] Income/Outcome buttons
-  - [ ] Accessible Radio Button 
+  - [x] Accessible modal
+  - [x] New transaction Modal
+  - [x] Income/Outcome buttons
+  - [x] Accessible Radio Button 
 
 
 ## Technical Stack <a name = "tech_stack"></a>
@@ -56,6 +56,7 @@ To run this project locally, you need to have Node.js installed on your machine.
 - styled-components - Visual primitives for the component age
 - eslint - Find and fix problems in your JavaScript code
 - phosphor-icons - A set of open source icons
+- radix-ui - Accessible, robust, and responsive React components
 
 ## Issues <a name = "issues"></a>
 
