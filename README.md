@@ -39,7 +39,7 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Project setup
   - [x] Header component
   - [x] Summary component
-  - [ ] Transactions component
+  - [x] Transactions table
   - [ ] Search Form component
   - [ ] Accessible modal
   - [ ] New transaction Modal
