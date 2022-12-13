@@ -35,15 +35,16 @@ To run this project locally, you need to have Node.js installed on your machine.
 
 ## Tasks <a name = "tasks"></a>
 
-- [x] Project setup
-- [ ] Header component
-- [ ] Summary component
-- [ ] Transactions component
-- [ ] Search Form component
-- [ ] Accessible modal
-- [ ] New transaction Modal
-- [ ] Income/Outcome buttons
-- [ ] Accessible Radio Button 
+- Visual Structure
+  - [x] Project setup
+  - [ ] Header component
+  - [ ] Summary component
+  - [ ] Transactions component
+  - [ ] Search Form component
+  - [ ] Accessible modal
+  - [ ] New transaction Modal
+  - [ ] Income/Outcome buttons
+  - [ ] Accessible Radio Button 
 
 
 ## Technical Stack <a name = "tech_stack"></a>
