@@ -38,7 +38,7 @@ To run this project locally, you need to have Node.js installed on your machine.
 - **Visual Structure**
   - [x] Project setup
   - [x] Header component
-  - [ ] Summary component
+  - [x] Summary component
   - [ ] Transactions component
   - [ ] Search Form component
   - [ ] Accessible modal
