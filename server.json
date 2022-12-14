@@ -1,3 +1,52 @@
 {
-  "transactions": []
+  "transactions": [
+    {
+      "id": "1234567890",
+      "description": "McDonalds",
+      "type": "outcome",
+      "category": "Fast Food",
+      "amount": 100,
+      "createdAt": "2022-12-10T21:58:47.877Z"
+    },
+    {
+      "id": "1234567891",
+      "description": "Salary December 2022",
+      "type": "income",
+      "category": "Salary",
+      "amount": 5000,
+      "createdAt": "2022-12-11T21:58:47.877Z"
+    },
+    {
+      "id": "1234567892",
+      "description": "ReactJS Course",
+      "type": "outcome",
+      "category": "Education",
+      "amount": 200,
+      "createdAt": "2022-12-12T21:58:47.877Z"
+    },
+    {
+      "id": "1234567893",
+      "description": "Gasoline",
+      "type": "outcome",
+      "category": "Transportation",
+      "amount": 150,
+      "createdAt": "2022-12-13T08:22:17.192Z"
+    },
+    {
+      "id": "1234567894",
+      "description": "Grocery Shopping",
+      "type": "outcome",
+      "category": "Food",
+      "amount": 300,
+      "createdAt": "2022-12-14T12:34:55.293Z"
+    },
+    {
+      "id": "1234567895",
+      "description": "Rent Payment",
+      "type": "outcome",
+      "category": "Housing",
+      "amount": 1000,
+      "createdAt": "2022-12-15T16:46:23.393Z"
+    }
+  ]
 }
