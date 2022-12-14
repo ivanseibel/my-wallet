@@ -1,39 +1,41 @@
-# my-wallet
 
-## Table of Contents
+# Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [About](#about)
 - [Screenshots](#screenshots)
-- [Getting Started](#getting_started)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installing](#installing)
 - [Features](#features)
 - [Tasks](#tasks)
-- [Technical Stack](#tech_stack)
+- [Technical Stack](#technical-stack)
 - [Issues](#issues)
-- [To Do](#todo)
+- [To Do](#to-do)
 
-## About <a name = "about"></a>
+# About
 
-Personal wallet with React and Typescript.
+myWallet is a React web app that implements a personal wallet. It allows users to register transactions and see their balance.
 
-## Screenshots <a name = "screenshots"></a>
+# Screenshots
 
 
-## Getting Started <a name = "getting_started"></a>
+# Getting Started
 
-### Prerequisites
+## Prerequisites
 
 To run this project locally, you need to have Node.js installed on your machine. You can download it from [here](https://nodejs.org/en/download/) or install it with your package manager. I recommend using [nvm](https://github.com/nvm-sh/nvm) or [n](https://github.com/tj/n).
 
-### Installing
+## Installing
 
 1. Clone this repository
 2. Install dependencies with `npm install`
 3. Run the app with `npm run dev`
 
-## Features <a name = "features"></a>
+# Features
 
 
-## Tasks <a name = "tasks"></a>
+# Tasks
 
 - **Visual Structure**
   - [x] Project setup
@@ -45,9 +47,11 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] New transaction Modal
   - [x] Income/Outcome buttons
   - [x] Accessible Radio Button 
+- **API Integration**
+  - [ ] JSON Server setup
 
 
-## Technical Stack <a name = "tech_stack"></a>
+# Technical Stack
 
 - React - A JavaScript library for building user interfaces
 - Vite - Next generation frontend tooling
@@ -57,8 +61,9 @@ To run this project locally, you need to have Node.js installed on your machine.
 - eslint - Find and fix problems in your JavaScript code
 - phosphor-icons - A set of open source icons
 - radix-ui - Accessible, robust, and responsive React components
+- json-server - Get a full fake REST API with zero coding in less than 30 seconds (seriously)
 
-## Issues <a name = "issues"></a>
+# Issues
 
 
-## To Do <a name = "todo"></a>
+# To Do
