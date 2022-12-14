@@ -48,7 +48,9 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Income/Outcome buttons
   - [x] Accessible Radio Button 
 - **API Integration**
-  - [ ] JSON Server setup
+  - [x] JSON Server setup
+  - [x] Test API
+  - [ ] Create Transactions Context
 
 
 # Technical Stack
