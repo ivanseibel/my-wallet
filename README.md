@@ -50,7 +50,9 @@ To run this project locally, you need to have Node.js installed on your machine.
 - **API Integration**
   - [x] JSON Server setup
   - [x] Test API
-  - [ ] Create Transactions Context
+  - [x] Create Transactions Context
+  - [ ] Calculate transactions balance
+  - [ ] Format numbers
 
 
 # Technical Stack
