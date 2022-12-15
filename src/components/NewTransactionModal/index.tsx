@@ -1,5 +1,9 @@
+import { zodResolver } from '@hookform/resolvers/zod'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
+import { useForm } from 'react-hook-form'
+import * as z from 'zod'
+
 import {
   CloseButton,
   Content,
@@ -8,7 +12,29 @@ import {
   TransactionTypeByButton,
 } from './styles'
 
+const newTransactionSchema = z.object({
+  description: z.string(),
+  value: z.number().nonnegative(),
+  category: z.string(),
+  type: z.enum(['income', 'outcome']).optional(),
+})
+
+type NewTransactionInputs = z.infer<typeof newTransactionSchema>
+
 export function NewTransactionModal() {
+  const {
+    register,
+    handleSubmit,
+    formState: { isSubmitting },
+  } = useForm<NewTransactionInputs>({
+    resolver: zodResolver(newTransactionSchema),
+  })
+
+  async function handleCreateNewTransaction(data: NewTransactionInputs) {
+    await new Promise((resolve) => setTimeout(resolve, 2000))
+    console.log(data)
+  }
+
   return (
     <Dialog.Portal>
       <Overlay />
@@ -19,10 +45,25 @@ export function NewTransactionModal() {
           <X size={24} />
         </CloseButton>
 
-        <form action="">
-          <input type="text" placeholder="Description" required />
-          <input type="number" placeholder="Value" required />
-          <input type="text" placeholder="Category" required />
+        <form onSubmit={handleSubmit(handleCreateNewTransaction)}>
+          <input
+            type="text"
+            placeholder="Description"
+            required
+            {...register('description')}
+          />
+          <input
+            type="number"
+            placeholder="Value"
+            required
+            {...register('value', { valueAsNumber: true })}
+          />
+          <input
+            type="text"
+            placeholder="Category"
+            required
+            {...register('category')}
+          />
 
           <TransactionType>
             <TransactionTypeByButton
@@ -43,7 +84,9 @@ export function NewTransactionModal() {
             </TransactionTypeByButton>
           </TransactionType>
 
-          <button type="submit">Create</button>
+          <button type="submit" disabled={isSubmitting}>
+            Create
+          </button>
         </form>
       </Content>
     </Dialog.Portal>
