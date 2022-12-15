@@ -53,7 +53,7 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Create Transactions Context
   - [x] Calculate transactions balance
   - [x] Format values
-  - [ ] Create hook to calculate summary
+  - [x] Create hook to calculate summary
 
 
 # Technical Stack
@@ -67,6 +67,7 @@ To run this project locally, you need to have Node.js installed on your machine.
 - phosphor-icons - A set of open source icons
 - radix-ui - Accessible, robust, and responsive React components
 - json-server - Get a full fake REST API with zero coding in less than 30 seconds (seriously)
+- react-hook-form - Performant, flexible and extensible forms with easy-to-use validation
 
 # Issues
 
