@@ -34,5 +34,6 @@ export const SummaryCard = styled.div<SummaryCardProps>`
     display: block;
     margin-top: 1rem;
     font-size: 2rem;
+    text-align: right;
   }
 `
