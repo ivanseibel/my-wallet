@@ -52,7 +52,8 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Test API
   - [x] Create Transactions Context
   - [x] Calculate transactions balance
-  - [ ] Format numbers
+  - [x] Format values
+  - [ ] Create hook to calculate summary
 
 
 # Technical Stack
