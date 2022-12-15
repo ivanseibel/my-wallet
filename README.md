@@ -54,6 +54,7 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Calculate transactions balance
   - [x] Format values
   - [x] Create hook to calculate summary
+  - [x] Form validation
 
 
 # Technical Stack
@@ -68,6 +69,8 @@ To run this project locally, you need to have Node.js installed on your machine.
 - radix-ui - Accessible, robust, and responsive React components
 - json-server - Get a full fake REST API with zero coding in less than 30 seconds (seriously)
 - react-hook-form - Performant, flexible and extensible forms with easy-to-use validation
+- hookforms/resolvers - A set of resolvers for react-hook-form
+- zod - TypeScript-first schema validation with static type inference
 
 # Issues
 
