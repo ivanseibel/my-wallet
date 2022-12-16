@@ -55,6 +55,7 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Format values
   - [x] Create hook to calculate summary
   - [x] Form validation
+  - [x] Controlled components
 
 
 # Technical Stack
