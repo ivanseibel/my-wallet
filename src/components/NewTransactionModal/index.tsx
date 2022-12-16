@@ -16,7 +16,7 @@ const newTransactionSchema = z.object({
   description: z.string(),
   value: z.number().nonnegative(),
   category: z.string(),
-  type: z.enum(['income', 'outcome']).optional(),
+  type: z.enum(['income', 'outcome']),
 })
 
 type NewTransactionInputs = z.infer<typeof newTransactionSchema>
