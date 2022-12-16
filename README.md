@@ -75,5 +75,6 @@ To run this project locally, you need to have Node.js installed on your machine.
 
 # Issues
 
+- [ ] Create transaction modal does not reset values when closed without submitting
 
 # To Do
