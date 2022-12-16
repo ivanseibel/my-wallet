@@ -1,7 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
-import { useForm } from 'react-hook-form'
+import { useForm, Controller } from 'react-hook-form'
 import * as z from 'zod'
 
 import {
@@ -26,6 +26,7 @@ export function NewTransactionModal() {
     register,
     handleSubmit,
     formState: { isSubmitting },
+    control,
   } = useForm<NewTransactionInputs>({
     resolver: zodResolver(newTransactionSchema),
     defaultValues: {
@@ -68,24 +69,33 @@ export function NewTransactionModal() {
             {...register('category')}
           />
 
-          <TransactionType>
-            <TransactionTypeByButton
-              type="button"
-              variant="income"
-              value="income"
-            >
-              <ArrowCircleUp size={24} />
-              Income
-            </TransactionTypeByButton>
-            <TransactionTypeByButton
-              type="button"
-              variant="outcome"
-              value="outcome"
-            >
-              <ArrowCircleDown size={24} />
-              Outcome
-            </TransactionTypeByButton>
-          </TransactionType>
+          <Controller
+            control={control}
+            name="type"
+            render={({ field }) => (
+              <TransactionType
+                onValueChange={field.onChange}
+                value={field.value}
+              >
+                <TransactionTypeByButton
+                  type="button"
+                  variant="income"
+                  value="income"
+                >
+                  <ArrowCircleUp size={24} />
+                  Income
+                </TransactionTypeByButton>
+                <TransactionTypeByButton
+                  type="button"
+                  variant="outcome"
+                  value="outcome"
+                >
+                  <ArrowCircleDown size={24} />
+                  Outcome
+                </TransactionTypeByButton>
+              </TransactionType>
+            )}
+          />
 
           <button type="submit" disabled={isSubmitting}>
             Create
