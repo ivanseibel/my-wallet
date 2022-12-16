@@ -63,7 +63,7 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Form validation
   - [x] Controlled components
   - [x] Search transactions
-  - [ ] Axios setup
+  - [x] Axios setup
 
 
 # Technical Stack
@@ -80,6 +80,7 @@ To run this project locally, you need to have Node.js installed on your machine.
 - react-hook-form - Performant, flexible and extensible forms with easy-to-use validation
 - hookforms/resolvers - A set of resolvers for react-hook-form
 - zod - TypeScript-first schema validation with static type inference
+- axios - Promise based HTTP client for the browser and node.js
 
 # Issues
 
