@@ -28,6 +28,9 @@ export function NewTransactionModal() {
     formState: { isSubmitting },
   } = useForm<NewTransactionInputs>({
     resolver: zodResolver(newTransactionSchema),
+    defaultValues: {
+      type: 'outcome',
+    },
   })
 
   async function handleCreateNewTransaction(data: NewTransactionInputs) {
