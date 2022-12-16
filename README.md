@@ -64,6 +64,7 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Controlled components
   - [x] Search transactions
   - [x] Axios setup
+  - [x] Create new transactions
 
 
 # Technical Stack
@@ -85,5 +86,7 @@ To run this project locally, you need to have Node.js installed on your machine.
 # Issues
 
 - [ ] Create transaction modal does not reset values when closed without submitting
+- [x] Amount input does not allow decimal values
+- [ ] Pagination
 
 # To Do

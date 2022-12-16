@@ -4,6 +4,8 @@ import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
 import { useForm, Controller } from 'react-hook-form'
 import * as z from 'zod'
 
+import { TransactionsContext } from '../../contexts/TransactionsContext'
+
 import {
   CloseButton,
   Content,
@@ -11,10 +13,11 @@ import {
   TransactionType,
   TransactionTypeByButton,
 } from './styles'
+import { useContext } from 'react'
 
 const newTransactionSchema = z.object({
   description: z.string(),
-  value: z.number().nonnegative(),
+  amount: z.number().nonnegative(),
   category: z.string(),
   type: z.enum(['income', 'outcome']),
 })
@@ -22,11 +25,14 @@ const newTransactionSchema = z.object({
 type NewTransactionInputs = z.infer<typeof newTransactionSchema>
 
 export function NewTransactionModal() {
+  const { createNewTransaction } = useContext(TransactionsContext)
+
   const {
     register,
     handleSubmit,
     formState: { isSubmitting },
     control,
+    reset,
   } = useForm<NewTransactionInputs>({
     resolver: zodResolver(newTransactionSchema),
     defaultValues: {
@@ -35,8 +41,9 @@ export function NewTransactionModal() {
   })
 
   async function handleCreateNewTransaction(data: NewTransactionInputs) {
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    console.log(data)
+    createNewTransaction(data)
+
+    reset()
   }
 
   return (
@@ -58,9 +65,10 @@ export function NewTransactionModal() {
           />
           <input
             type="number"
-            placeholder="Value"
+            placeholder="Amount"
             required
-            {...register('value', { valueAsNumber: true })}
+            step={0.01}
+            {...register('amount', { valueAsNumber: true })}
           />
           <input
             type="text"
