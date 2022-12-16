@@ -63,7 +63,7 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Form validation
   - [x] Controlled components
   - [x] Search transactions
-  - [ ] Axios setup
+  - [x] Axios setup
 
 
 # Technical Stack
