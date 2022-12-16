@@ -34,6 +34,12 @@ To run this project locally, you need to have Node.js installed on your machine.
 
 # Features
 
+- Transactions list with summary
+- Create new transactions
+- Search transactions by text
+- Accessible modal
+- Integration with API
+- Input validation
 
 # Tasks
 
@@ -56,6 +62,8 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Create hook to calculate summary
   - [x] Form validation
   - [x] Controlled components
+  - [x] Search transactions
+  - [ ] Axios setup
 
 
 # Technical Stack
