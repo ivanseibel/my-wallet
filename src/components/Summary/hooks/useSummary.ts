@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { useContextSelector } from 'use-context-selector'
 import { TransactionsContext } from '../../../contexts/TransactionsContext'
 import { valueFormatter } from '../../../utils/formatter'
@@ -8,24 +9,26 @@ export function useSummary() {
     (context) => context.transactions,
   )
 
-  const summary = transactions.reduce(
-    (acc, transaction) => {
-      if (transaction.type === 'income') {
-        acc.income += transaction.amount
-        acc.balance += transaction.amount
-      } else {
-        acc.outcome += transaction.amount
-        acc.balance -= transaction.amount
-      }
+  const summary = useMemo(() => {
+    return transactions.reduce(
+      (acc, transaction) => {
+        if (transaction.type === 'income') {
+          acc.income += transaction.amount
+          acc.balance += transaction.amount
+        } else {
+          acc.outcome += transaction.amount
+          acc.balance -= transaction.amount
+        }
 
-      return acc
-    },
-    {
-      income: 0,
-      outcome: 0,
-      balance: 0,
-    },
-  )
+        return acc
+      },
+      {
+        income: 0,
+        outcome: 0,
+        balance: 0,
+      },
+    )
+  }, [transactions])
 
   return {
     income: valueFormatter.format(summary.income),
