@@ -120,3 +120,19 @@ export const TransactionTypeByButton = styled(
     transition: background-color 0.2s;
   }
 `
+export const NewTransactionButton = styled.button`
+  height: 3.125rem;
+  border: 0;
+  background-color: ${(props) => props.theme['green-500']};
+  color: ${(props) => props.theme.white};
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${(props) => props.theme['green-700']};
+    transition: background-color 0.2s;
+  }
+`
