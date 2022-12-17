@@ -19,6 +19,7 @@ myWallet is a React web app that implements a personal wallet. It allows users t
 
 # Screenshots
 
+![myWallet](/screenshoots/screenshot1.png)
 
 # Getting Started
 
