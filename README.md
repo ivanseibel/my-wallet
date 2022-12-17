@@ -65,6 +65,7 @@ To run this project locally, you need to have Node.js installed on your machine.
   - [x] Search transactions
   - [x] Axios setup
   - [x] Create new transactions
+  - [ ] Improve performance
 
 
 # Technical Stack
@@ -82,6 +83,8 @@ To run this project locally, you need to have Node.js installed on your machine.
 - hookforms/resolvers - A set of resolvers for react-hook-form
 - zod - TypeScript-first schema validation with static type inference
 - axios - Promise based HTTP client for the browser and node.js
+- use-context-selector - A React hook to select a value from a context without re-rendering the entire component tree
+- scheduler - A general purpose cooperative main thread scheduler for JavaScript
 
 # Issues
 
