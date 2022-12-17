@@ -9,6 +9,7 @@ import { TransactionsContext } from '../../contexts/TransactionsContext'
 import {
   CloseButton,
   Content,
+  NewTransactionButton,
   Overlay,
   TransactionType,
   TransactionTypeByButton,
@@ -49,70 +50,82 @@ export function NewTransactionModal() {
     reset()
   }
 
+  function handleOnOpenChange(open: boolean) {
+    if (!open) {
+      reset()
+    }
+  }
+
   return (
-    <Dialog.Portal>
-      <Overlay />
-      <Content>
-        <Dialog.Title>New transaction</Dialog.Title>
+    <Dialog.Root onOpenChange={handleOnOpenChange}>
+      <Dialog.Trigger asChild>
+        <NewTransactionButton>New transaction</NewTransactionButton>
+      </Dialog.Trigger>
 
-        <CloseButton>
-          <X size={24} />
-        </CloseButton>
+      <Dialog.Portal>
+        <Overlay />
+        <Content>
+          <Dialog.Title>New transaction</Dialog.Title>
 
-        <form onSubmit={handleSubmit(handleCreateNewTransaction)}>
-          <input
-            type="text"
-            placeholder="Description"
-            required
-            {...register('description')}
-          />
-          <input
-            type="number"
-            placeholder="Amount"
-            required
-            step={0.01}
-            {...register('amount', { valueAsNumber: true })}
-          />
-          <input
-            type="text"
-            placeholder="Category"
-            required
-            {...register('category')}
-          />
+          <CloseButton>
+            <X size={24} />
+          </CloseButton>
 
-          <Controller
-            control={control}
-            name="type"
-            render={({ field }) => (
-              <TransactionType
-                onValueChange={field.onChange}
-                value={field.value}
-              >
-                <TransactionTypeByButton
-                  type="button"
-                  variant="income"
-                  value="income"
+          <form onSubmit={handleSubmit(handleCreateNewTransaction)}>
+            <input
+              type="text"
+              placeholder="Description"
+              required
+              {...register('description')}
+            />
+            <input
+              type="number"
+              placeholder="Amount"
+              required
+              step={0.01}
+              {...register('amount', { valueAsNumber: true })}
+            />
+            <input
+              type="text"
+              placeholder="Category"
+              required
+              {...register('category')}
+            />
+
+            <Controller
+              control={control}
+              name="type"
+              render={({ field }) => (
+                <TransactionType
+                  onValueChange={field.onChange}
+                  value={field.value}
                 >
-                  <ArrowCircleUp size={24} />
-                  Income
-                </TransactionTypeByButton>
-                <TransactionTypeByButton
-                  type="button"
-                  variant="outcome"
-                  value="outcome"
-                >
-                  <ArrowCircleDown size={24} />
-                  Outcome
-                </TransactionTypeByButton>
-              </TransactionType>
-            )}
-          />
+                  <TransactionTypeByButton
+                    type="button"
+                    variant="income"
+                    value="income"
+                  >
+                    <ArrowCircleUp size={24} />
+                    Income
+                  </TransactionTypeByButton>
+                  <TransactionTypeByButton
+                    type="button"
+                    variant="outcome"
+                    value="outcome"
+                  >
+                    <ArrowCircleDown size={24} />
+                    Outcome
+                  </TransactionTypeByButton>
+                </TransactionType>
+              )}
+            />
 
-          <button type="submit" disabled={isSubmitting}>
-            Create
-          </button>
-        </form>
-      </Content>
-    </Dialog.Portal>
+            <button type="submit" disabled={isSubmitting}>
+              Create
+            </button>
+          </form>
+        </Content>
+      </Dialog.Portal>
+    </Dialog.Root>
   )
 }
